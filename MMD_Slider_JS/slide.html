@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Slide</title>
+    </head>
+    <body>
+       
+
+<img id="slide" width="600" height="300">
+    </body>
+     <script >
+	
+    var image = ['imac.jpg','imac2.png','imac3.png','compe.jpg'];
+    var time = 3000;
+    var cpt = 0;
+
+
+    //chqrge imqge
+
+    function changeImage(){
+        document.getElementById('slide').src= image[cpt];
+        cpt++;
+        if(cpt == image.length){
+        cpt=0;
+        }
+           setTimeout("changeImage()", time);
+    }
+        changeImage();
+</script>
+</html>
+
+
